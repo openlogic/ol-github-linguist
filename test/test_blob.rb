@@ -4,12 +4,12 @@ require 'linguist/samples'
 require 'test/unit'
 require 'mocha'
 require 'mime/types'
-require 'pygments'
+#require 'pygments'
 
 class TestBlob < Test::Unit::TestCase
   include Linguist
 
-  Lexer = Pygments::Lexer
+  #Lexer = Pygments::Lexer
 
   def samples_path
     File.expand_path("../../samples", __FILE__)
@@ -295,9 +295,9 @@ class TestBlob < Test::Unit::TestCase
     end
   end
 
-  def test_lexer
-    assert_equal Lexer['Ruby'], blob("Ruby/foo.rb").lexer
-  end
+  # def test_lexer
+  #   assert_equal Lexer['Ruby'], blob("Ruby/foo.rb").lexer
+  # end
 
   def test_colorize
     assert_equal <<-HTML.chomp, blob("Ruby/foo.rb").colorize

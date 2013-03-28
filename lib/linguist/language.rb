@@ -1,6 +1,6 @@
 # require 'escape_utils'
 require 'cgi'
-require 'pygments'
+#require 'pygments'
 require 'yaml'
 
 require 'linguist/classifier'

@@ -2,7 +2,9 @@
 
 We are using this package under jruby, which doesn't like C extensions.  As a result, we are
 trying to remove the C extensions as much as possible.  In this version, we replaced escape_utils
-with the cgi module, and commented out references to Pygments.
+with the cgi module, and commented out references to Pygments. Note that this breaks some
+functionality, but it's functionality that we don't care about. We only need to be able to detect
+the language of a file for our purposes.
 
 # Linguist
 
