@@ -1,7 +1,7 @@
 require 'linguist/generated'
 require 'linguist/language'
 
-require 'charlock_holmes'
+#require 'charlock_holmes'
 #require 'escape_utils'
 require 'mime/types'
 #require 'pygments'
@@ -104,7 +104,7 @@ module Linguist
     #          this will return nil if an error occurred during detection or
     #          no valid encoding could be found
     def detect_encoding
-      @detect_encoding ||= CharlockHolmes::EncodingDetector.new.detect(data) if data
+      nil # @detect_encoding ||= CharlockHolmes::EncodingDetector.new.detect(data) if data
     end
 
     # Public: Is the blob binary?
