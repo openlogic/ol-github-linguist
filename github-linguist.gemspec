@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name    = 'ol-github-linguist'
-  s.version = '2.4.2.3'
+  s.version = '2.4.2.4'
   s.summary = "GitHub Language detection (special OL dub)"
 
   s.authors  = "GitHub/OpenLogic"
-  s.homepage = "https://github.com/github/linguist"
+  s.homepage = "https://github.com/openlogic/ol-github-linguist"
 
   s.files = Dir['lib/**/*']
   s.executables << 'linguist'
