@@ -429,9 +429,6 @@ Forth:
   primary_extension: .fth
   color: "#341708"
   lexer: Text only
-  extensions:
-  - .forth
-  - .fth
 
 GAS:
   type: programming
@@ -652,11 +649,6 @@ Lasso:
   ace_mode: lasso
   color: "#2584c3"
   primary_extension: .lasso
-  extensions:
-  - .inc
-  - .las
-  - .lasso9
-  - .ldml
 
 Less:
   type: markup
@@ -702,7 +694,6 @@ Lua:
   primary_extension: .lua
   extensions:
   - .nse
-  - .pd_lua
 
 Makefile:
   aliases:
@@ -850,8 +841,6 @@ Omgrofl:
   primary_extension: .omgrofl
   color: "#cabbff"
   lexer: Text only
-  extensions:
-  - .omgrofl
 
 Opa:
   type: programming
@@ -1102,7 +1091,6 @@ Shell:
   - zsh
   primary_extension: .sh
   extensions:
-  - .bash
   - .tmux
 
 Smalltalk:
