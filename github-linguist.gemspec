@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'ol-github-linguist'
-  s.version = '2.4.2.4'
+  s.version = '2.4.2.5'
   s.summary = "GitHub Language detection (special OL dub)"
 
   s.authors  = "GitHub/OpenLogic"

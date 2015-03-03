@@ -172,6 +172,7 @@ C++:
   - .hh
   - .hxx
   - .tcc
+  - .fmt
 
 C-ObjDump:
   type: data
