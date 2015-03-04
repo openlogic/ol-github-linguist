@@ -191,7 +191,7 @@ module Linguist
       !large? && text?
     end
 
-    vendored_paths = YAML.load_file(File.expand_path("../vendor.yml", __FILE__))
+    vendored_paths = YAML.load(File.read(File.expand_path("../vendor.yml", __FILE__)))
     VendoredRegexp = Regexp.new(vendored_paths.join('|'))
 
     # Public: Is the blob in a vendored directory?

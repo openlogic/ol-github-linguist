@@ -437,15 +437,15 @@ module Linguist
 
   extensions = Samples::DATA['extnames']
   filenames = Samples::DATA['filenames']
-  popular = YAML.load_file(File.expand_path("../popular.yml", __FILE__))
-
-  YAML.load_file(File.expand_path("../languages.yml", __FILE__)).each do |name, options|
+  popular = YAML.load(File.read(File.expand_path("../popular.yml", __FILE__)))
+  
+  YAML.load(File.read(File.expand_path("../languages.yml", __FILE__))).each do |name, options|
     options['extensions'] ||= []
     options['filenames'] ||= []
 
     if extnames = extensions[name]
       extnames.each do |extname|
-        if !options['extensions'].include?(extname)
+        if not options['extensions'].include?(extname)
           options['extensions'] << extname
         else
           warn "#{name} #{extname.inspect} is already defined in samples/. Remove from languages.yml."
@@ -455,7 +455,7 @@ module Linguist
 
     if fns = filenames[name]
       fns.each do |filename|
-        if !options['filenames'].include?(filename)
+        if not options['filenames'].include?(filename)
           options['filenames'] << filename
         else
           warn "#{name} #{filename.inspect} is already defined in samples/. Remove from languages.yml."

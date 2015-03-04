@@ -58,7 +58,7 @@ class TestClassifier < Test::Unit::TestCase
       languages = Language.find_by_filename(sample[:path]).map(&:name)
       next unless languages.length > 1
 
-      results = Classifier.classify(Samples::DATA, File.read(sample[:path]), languages)
+      results = Classifier.classify(Samples::DATA, File.binread(sample[:path]), languages)
       assert_equal language.name, results.first[0], "#{sample[:path]}\n#{results.inspect}"
     end
   end

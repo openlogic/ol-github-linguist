@@ -1,6 +1,6 @@
 require 'linguist/samples'
 require 'tempfile'
-require 'yajl'
+require 'json'
 
 require 'test/unit'
 
@@ -16,11 +16,11 @@ class TestSamples < Test::Unit::TestCase
       warn "Samples database is out of date. Run `bundle exec rake samples`."
 
       expected = Tempfile.new('expected.json')
-      expected.write Yajl::Encoder.encode(serialized, :pretty => true)
+      expected.write JSON.pretty_generate(serialized)
       expected.close
 
       actual = Tempfile.new('actual.json')
-      actual.write Yajl::Encoder.encode(latest, :pretty => true)
+      actual.write JSON.pretty_generate(latest)
       actual.close
 
       warn `diff #{expected.path} #{actual.path}`

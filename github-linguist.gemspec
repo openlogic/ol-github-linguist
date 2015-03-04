@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'ol-github-linguist'
-  s.version = '2.4.2.4'
+  s.version = '2.4.2.7'
   s.summary = "GitHub Language detection (special OL dub)"
 
   s.authors  = "GitHub/OpenLogic"
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'mime-types',      '~> 1.19'
   #s.add_dependency 'pygments.rb',     '~> 0.3.7'
   s.add_development_dependency 'mocha'
-  s.add_development_dependency 'json'
+  #s.add_development_dependency 'json'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'yajl-ruby'
+  s.add_development_dependency 'json_pure'
 end

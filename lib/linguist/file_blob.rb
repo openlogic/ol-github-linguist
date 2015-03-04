@@ -43,7 +43,7 @@ module Linguist
     #
     # Returns a String.
     def data
-      File.read(@path)
+      File.binread(@path)
     end
 
     # Public: Get byte size

@@ -1,4 +1,4 @@
-require 'yaml'
+require 'json'
 
 require 'linguist/md5'
 require 'linguist/classifier'
@@ -14,7 +14,7 @@ module Linguist
 
     # Hash of serialized samples object
     if File.exist?(PATH)
-      DATA = YAML.load_file(PATH)
+      DATA = JSON.load(File.read(PATH))
     end
 
     # Public: Iterate over each sample.
@@ -86,7 +86,7 @@ module Linguist
           db['filenames'][language_name].sort!
         end
 
-        data = File.read(sample[:path])
+        data = File.binread(sample[:path])
         Classifier.train!(db, language_name, data)
       end
 
